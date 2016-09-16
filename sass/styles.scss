@@ -1,0 +1,1133 @@
+@import "./node_modules/garba-ui/core/garbaui-core";
+
+
+////////////////////////////////
+///////////// BASE /////////////
+////////////////////////////////
+body {
+	background-color: $gray-lightest;
+}
+
+// Header
+.gb-site-header {
+	position: relative;
+
+	#demo-canvas {
+		width: 100%;
+	}
+
+	.gb-site-header-title {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		color: $gray-darkest;
+		font-size: 23px;
+		margin-top: -40px;
+
+		.gb-site-header-title-inner {
+			@include transition(all 0.2s ease-out);
+			background-color: rgba($white, 0.75);
+			padding: 15px;
+			height: 125px;
+			
+			em {
+				@include transition(all 0.2s ease-out);
+				display: block;
+				font-size: 61px;
+				font-weight: 700;
+				position: relative;
+			}
+
+			span {
+				@include transition(all 0.2s ease-out);
+				display: block;
+				position: relative;
+				font-weight: 300;
+			}
+		}
+
+		// Menu icon
+		.gb-site-header-menu-icon {
+			@include transition(all 0.2s ease-out);
+			@include border-radius(2px);
+			width: 30px;
+			height: 25px;
+			position: relative;
+			position: absolute;
+			top: 15px;
+			left: -45px;
+			cursor: pointer;
+
+			&:before, &:after {
+				@include transition(all 0.2s ease-out);
+				@include border-radius(2px);
+				content: '';
+				position: absolute;
+				height: 5px;
+				background-color: $gray-dark;
+				left: 0;
+				right: 0;
+			}
+
+			&:before {
+				top: 0;
+			}
+
+			&:after {
+				bottom: 0;
+			}
+
+			span {
+				@include transition(all 0.2s ease-out);
+				@include border-radius(2px);
+				display: block;
+				height: 5px;
+				background-color: $gray-dark;
+				top: 10px;
+				position: relative;
+			}
+
+			&:hover {
+				width: 36px;
+				margin-left: -3px;
+
+				&:before, &:after, span {
+					background-color: $alizarin-crimson;
+				}
+			}
+		}
+
+		// Menu
+		.gb-site-header-menu {
+			@include transition(all 0.2s ease-out);
+			position: fixed;
+			top: 55px;
+			bottom: 0;
+			text-align: left;
+			font-size: 14px;
+			background-color: $white;
+			width: 150px;
+			left: -150px;
+
+			ul {
+				li {
+					@include transition(all 0.2s ease-out);
+					position: relative;
+
+					a {
+						@include transition(all 0.2s ease-out);
+						display: block;
+						padding: 10px 45px;
+						position: relative;
+						z-index: 1;
+						color: $gray-darkest;
+						text-decoration: none;
+						outline: none;
+					}
+
+					&:hover {
+						background-color: $red-light;
+						a {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		
+		// Sticky
+		&.gb--sticky {
+			position: fixed;
+			top: 0;
+			margin-top: 0;
+			z-index: 10;
+
+			.gb-site-header-title-inner {
+				height: 55px;
+
+				em {
+					@include opacity(0);
+					margin-top: -120px;
+				}
+
+				span {
+					@include opacity(0);
+					margin-top: -120px;
+				}
+			}
+
+			// Menu icon
+			.gb-site-header-menu-icon {
+				left: 15px;
+			}
+			
+			// Menu opened
+			&.gb--menu-opened {
+
+				.gb-site-header-title-inner {
+					background-color: $white;
+				}
+				
+				// Menu
+				.gb-site-header-menu-icon {
+
+					&:before {
+						@include rotate($deg: -45);
+						top: 10px;
+					}
+					&:after {
+						@include rotate($deg: 45);
+						bottom: 10px;
+					}
+					span {
+						@include opacity(0);
+					}
+				}
+
+				// Menu
+				.gb-site-header-menu {
+					left: 0;
+				}
+			}
+		}
+
+	}
+}
+
+// Box base
+.gb-site-box {
+	@include border-radius(3px);
+	@include box-shadow(0, 0, 5px, 0, rgba($black, 0.5));
+	background-color: $white;
+	padding: 25px;
+	margin-top: 50px;
+	position: relative;
+
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	.gb-site-box-title {
+		font-size: 30px;
+		color: $gray-darkest;
+		margin-bottom: 25px;
+	}
+
+	.gb-site-box-title-secondary {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 10px;
+
+		&.margin-top {
+			margin-top: 45px;
+		}
+	}
+
+	&.transparent {
+		@include box-shadow(0,0,0,0);
+		background-color: transparent;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Box code
+.gb-site-code-box {
+	border: 1px solid $silver;
+
+	.gb-site-code-box-header {
+		background-color: $gray-lightest;
+		color: $gray-dark;
+		font-size: 12px;
+
+		ul {
+			@include clearfix;
+			border-bottom: 1px solid $silver;
+
+			li {
+				@include transition(all .2s ease-out);
+				padding: 10px 20px;
+				border-right: 1px solid $silver;
+				text-transform: uppercase;
+				display: block;
+				float: left;
+				cursor: pointer;
+				position: relative;
+
+				&:hover {
+					background-color: $gray-light;
+				}
+
+				&.active {
+					background-color: $white;
+
+					&:before {
+						content: '';
+						position: absolute;
+						bottom: -1px;
+						left: 0;
+						right: 0;
+						border-bottom: 1px solid $white;
+					}
+				}
+			}
+		}
+	}
+
+	.gb-site-code-box-content {
+		@include gb-hide-module;
+		font-size: 13px;
+		color: $gray-dark;
+
+		&.active {
+			@include gb-show-module;
+			overflow-y: auto;
+		}
+
+		.gb-site-code-box-content-inner {
+			padding: 10px;
+		}
+
+		code {
+
+			
+			p {
+				line-height: 2;
+			}
+		}
+
+		// Gist
+		.gist { 
+			.gist-file {
+				border: 0;
+				margin: 0;
+			}
+			.gist-data {
+				border-bottom: 0;
+			}
+			.gist-meta {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+/////////////////////////////////
+///////////// USAGE /////////////
+/////////////////////////////////
+.gb-site-usage {
+	text-align: center;
+
+	> .gb-site-box-title {
+		margin: 40px 0 15px 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	> p {
+		padding: 5px 10px;
+		background-color: $red-light;
+		color: $white;
+		display: inline-block;
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+
+
+//////////////////////////////////
+///////////// COLORS /////////////
+//////////////////////////////////
+.gb-site-colors {
+	@include clearfix;
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	> li {
+		display: block;
+		float: left;
+		width: 150px;
+		height: 150px;
+		font-size: 12px;
+		color: $white;
+		position: relative;
+
+		// Texto referencia
+		.gb-site-colors-reference {
+			@include text-shadow(0, 0, 3px, rgba($black, 0.75));
+			padding: 10px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+
+			em {
+				font-size: 14px;
+				font-weight: 700;
+				margin-bottom: 5px;
+			}
+		}
+
+		// Rojos
+		&.alizarin-crimson {
+			background-color: $alizarin-crimson;
+		}
+
+		&.red-darkest {
+			background-color: $red-darkest;
+		}
+
+		&.red-dark {
+			background-color: $red-dark;
+		}
+
+		&.red {
+			background-color: $red;
+		}
+
+		&.red-2 {
+			background-color: $red-2;
+		}
+
+		&.red-light {
+			background-color: $red-light;
+		}
+
+		&.red-lighter {
+			background-color: $red-lighter;
+		}
+
+		&.red-lightest {
+			background-color: $red-lightest;
+		}
+
+		// Azules
+		&.blue-darkest {
+			background-color: $blue-darkest;
+		}
+
+		&.blue-dark {
+			background-color: $blue-dark;
+		}
+
+		&.blue {
+			background-color: $blue;
+		}
+
+		&.blue-2 {
+			background-color: $blue-2;
+		}
+
+		&.blue-light {
+			background-color: $blue-light;
+		}
+
+		&.blue-lighter {
+			background-color: $blue-lighter;
+		}
+
+		&.blue-lightest {
+			background-color: $blue-lightest;
+		}
+
+		// Amarillos
+		&.yellow-darkest {
+			background-color: $yellow-darkest;
+		}
+
+		&.yellow-dark {
+			background-color: $yellow-dark;
+		}
+
+		&.yellow {
+			background-color: $yellow;
+		}
+
+		&.yellow-light {
+			background-color: $yellow-light;
+		}
+
+		&.yellow-lighter {
+			background-color: $yellow-lighter;
+		}
+
+		&.yellow-lightest {
+			background-color: $yellow-lightest;
+		}
+
+		// Verdes
+		&.green-darkest {
+			background-color: $green-darkest;
+		}
+
+		&.green-dark {
+			background-color: $green-dark;
+		}
+
+		&.green {
+			background-color: $green;
+		}
+
+		&.green-light {
+			background-color: $green-light;
+		}
+
+		&.green-lighter {
+			background-color: $green-lighter;
+		}
+
+		&.green-lightest {
+			background-color: $green-lightest;
+		}
+
+		// Grises
+		&.black {
+			background-color: $black;
+		}
+
+		&.gray-darkest {
+			background-color: $gray-darkest;
+		}
+
+		&.gray-dark {
+			background-color: $gray-dark;
+		}
+
+		&.silver-chalice {
+			background-color: $silver-chalice;
+		}
+
+		&.silver {
+			background-color: $silver;
+		}
+
+		&.silver-light {
+			background-color: $silver-light;
+		}
+
+		&.silver-lightest {
+			background-color: $silver-lightest;
+		}
+
+		&.gray-light {
+			background-color: $gray-light;
+		}
+
+		&.gray-lightest {
+			background-color: $gray-lightest;
+		}
+
+		&.white {
+			background-color: $white;
+		}
+
+		// COMPUMUNDO
+		&.teal {
+			background-color: $teal;
+		}
+	}
+}
+
+
+
+
+/////////////////////////////////
+///////////// ICONS /////////////
+/////////////////////////////////
+.gb-site-icons {
+	> li {
+		@include border-radius(3px);
+		@include box-shadow(0, 0, 5px, 0, rgba($black, 0.5));
+		@include transition(all 0.2s ease-out);
+		background-color: $white;
+		border: 1px solid transparent;
+		display: inline-block;
+		margin: 5px;
+		padding: 10px;
+		text-align: center;
+		width: 130px;
+		height: 130px;
+		position: relative;
+
+		&:hover {
+			@include transform(scale(1.1));
+			@include box-shadow(0, 0, 5px, 0, rgba($red-light, 0.5));
+			border: 1px solid $red-light;
+
+			[class*="gb-icon"], > p {
+				color: $red-light;
+			}
+		}
+
+		[class*="gb-icon"] {
+			@include transition(all 0.2s ease-out);
+			font-size: 40px;
+			color: $gray-darkest;
+			margin-top: 20px;
+			display: block;
+			font-weight: 300;
+		}
+
+		> p {
+			@include transition(all 0.2s ease-out);
+			position: absolute;
+			padding: 10px 5px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font-size: 12px;
+		} 
+	}
+}
+
+
+
+
+///////////////////////////////////
+///////////// GRILLAS /////////////
+///////////////////////////////////
+.gb-site-grids {
+
+	.gb-site-grids-example {
+		margin-top: 50px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.row {
+		margin-top: 10px;
+	}
+
+	[class*="col-"] {
+		background-color: $gray-lightest;
+		min-height: 50px;
+		border: 1px solid $gray-light;
+		color: $gray-darkest;
+		font-size: 14px;
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+}
+
+
+
+
+
+
+///////////////////////////////////
+///////////// BOTONES /////////////
+///////////////////////////////////
+.gb-site-buttons {
+	margin-top: 50px;
+
+	// Vista del componente
+	.gb-site-buttons-content {
+		margin: 10px 0 25px;
+
+		> p {
+			margin-top: 10px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/////////////////////////////////
+///////////// FORMS /////////////
+/////////////////////////////////
+.gb-site-forms {
+	margin-top: 50px;
+
+	// Vista del componente
+	.gb-site-forms-content {
+		margin: 10px 0 25px;
+
+		.gb-label {
+			margin-bottom: 5px;
+		}
+
+		> div {
+			margin-top: 10px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+////////////////////////////////
+///////////// TABS /////////////
+////////////////////////////////
+.gb-site-tabs {
+	margin-top: 50px;
+}
+
+.gb-tab-content {
+	p {
+		font-size: 30px;
+		text-align: center;
+		margin: 30px 0;
+	}
+}
+
+
+
+
+
+
+
+
+///////////////////////////////////
+///////////// POPOVER /////////////
+///////////////////////////////////
+.gb-site-popover {
+	margin: 50px 0;
+
+	&:first-child {
+		margin-bottom: 0;
+	}
+
+	ul {
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 25px;
+		}
+	}
+
+
+	// Popover top arrow left
+	.gb-site-popover-top-arrow-left {
+		@include popover;
+		top: 0;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			top: 25px;
+		}
+	}
+
+	// Popover top arrow center
+	.gb-site-popover-top-arrow-center {
+		@include popover($arrow: top-center);
+		top: 0;
+		left: 50%;
+		margin-left: -100px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			top: 25px;
+		}
+	}
+
+	// Popover top arrow right
+	.gb-site-popover-top-arrow-right {
+		@include popover($arrow: top-right);
+		top: 0;
+		right: 0;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			top: 25px;
+		}
+	}
+
+	// Popover bottom arrow left
+	.gb-site-popover-bottom-arrow-left {
+		@include popover($animation: fromBottom, $arrow: bottom-left);
+		bottom: 0;
+		left: 0;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			bottom: 25px;
+		}
+	}
+
+	// Popover bottom arrow center
+	.gb-site-popover-bottom-arrow-center {
+		@include popover($animation: fromBottom, $arrow: bottom-center);
+		bottom: 0;
+		left: 50%;
+		margin-left: -100px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			bottom: 25px;
+		}
+	}
+
+	// Popover bottom arrow right
+	.gb-site-popover-bottom-arrow-right {
+		@include popover($animation: fromBottom, $arrow: bottom-right);
+		bottom: 0;
+		right: 0;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			bottom: 25px;
+		}
+	}
+
+	// Popover left arrow top
+	.gb-site-popover-left-arrow-top {
+		@include popover($animation: fromLeft, $arrow: right-top);
+		left: -190px;
+		top: -15px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			left: -215px;
+		}
+	}
+
+	// Popover left arrow center
+	.gb-site-popover-left-arrow-center {
+		@include popover($animation: fromLeft, $arrow: right-center);
+		left: -190px;
+		top: -72px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			left: -215px;
+		}
+	}
+
+	// Popover left arrow bottom
+	.gb-site-popover-left-arrow-bottom {
+		@include popover($animation: fromLeft, $arrow: right-bottom);
+		left: -190px;
+		bottom: -15px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			left: -215px;
+		}
+	}
+
+	// Popover right arrow top
+	.gb-site-popover-right-arrow-top {
+		@include popover($animation: fromRight, $arrow: left-top);
+		right: -190px;
+		top: -15px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			right: -215px;
+		}
+	}
+
+	// Popover right arrow center
+	.gb-site-popover-right-arrow-center {
+		@include popover($animation: fromRight, $arrow: left-center);
+		right: -190px;
+		top: -72px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			right: -215px;
+		}
+	}
+
+	// Popover right arrow bottom
+	.gb-site-popover-right-arrow-bottom {
+		@include popover($animation: fromRight, $arrow: left-bottom);
+		right: -190px;
+		bottom: -15px;
+
+		&.gb--show {
+			@include opacity(1);
+			visibility: visible;
+			right: -215px;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+///////////////////////////////////
+///////////// TOOLTIP /////////////
+///////////////////////////////////
+.gb-site-tooltip {
+	margin: 50px 0;
+
+	&:first-child {
+		margin-bottom: 0;
+	}
+
+	ul {
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 25px;
+		}
+	}
+
+
+	// tooltip top arrow left
+	.gb-site-tooltip-top-arrow-left {
+		@include tooltip;
+		top: 0;
+	}
+	.gb-site-tooltip-top-arrow-left-button {
+		&:hover {
+			.gb-site-tooltip-top-arrow-left {
+				@include opacity(1);
+				visibility: visible;
+				top: 25px;
+			}
+		}
+	}
+
+	// tooltip top arrow center
+	.gb-site-tooltip-top-arrow-center {
+		@include tooltip($arrow: top-center);
+		top: 0;
+		left: 50%;
+		margin-left: -90px;
+	}
+	.gb-site-tooltip-top-arrow-center-button {
+		&:hover {
+			.gb-site-tooltip-top-arrow-center {
+				@include opacity(1);
+				visibility: visible;
+				top: 25px;
+			}
+		}
+	}
+
+	// tooltip top arrow right
+	.gb-site-tooltip-top-arrow-right {
+		@include tooltip($arrow: top-right);
+		top: 0;
+		right: 0;
+	}
+	.gb-site-tooltip-top-arrow-right-button {
+		&:hover {
+			.gb-site-tooltip-top-arrow-right {
+				@include opacity(1);
+				visibility: visible;
+				top: 25px;
+			}
+		}
+	}
+
+
+	// tooltip bottom arrow left
+	.gb-site-tooltip-bottom-arrow-left {
+		@include tooltip($animation: fromBottom, $arrow: bottom-left);
+		bottom: 0;
+	}
+	.gb-site-tooltip-bottom-arrow-left-button {
+		&:hover {
+			.gb-site-tooltip-bottom-arrow-left {
+				@include opacity(1);
+				visibility: visible;
+				bottom: 25px;
+			}
+		}
+	}
+
+	// tooltip bottom arrow center
+	.gb-site-tooltip-bottom-arrow-center {
+		@include tooltip($animation: fromBottom, $arrow: bottom-center);
+		bottom: 0;
+		left: 50%;
+		margin-left: -90px;
+	}
+	.gb-site-tooltip-bottom-arrow-center-button {
+		&:hover {
+			.gb-site-tooltip-bottom-arrow-center {
+				@include opacity(1);
+				visibility: visible;
+				bottom: 25px;
+			}
+		}
+	}
+
+	// tooltip bottom arrow right
+	.gb-site-tooltip-bottom-arrow-right {
+		@include tooltip($animation: fromBottom, $arrow: bottom-right);
+		bottom: 0;
+		right: 0;
+	}
+	.gb-site-tooltip-bottom-arrow-right-button {
+		&:hover {
+			.gb-site-tooltip-bottom-arrow-right {
+				@include opacity(1);
+				visibility: visible;
+				bottom: 25px;
+			}
+		}
+	}
+
+
+	// tooltip left arrow center
+	.gb-site-tooltip-left-arrow-center {
+		@include tooltip($animation: fromLeft, $arrow: right-center);
+		left: -165;
+		top: -5px;
+	}
+	.gb-site-tooltip-left-arrow-center-button {
+		&:hover {
+			.gb-site-tooltip-left-arrow-center {
+				@include opacity(1);
+				visibility: visible;
+				left: -190px;
+			}
+		}
+	}
+
+	// tooltip right arrow center
+	.gb-site-tooltip-right-arrow-center {
+		@include tooltip($animation: fromRight, $arrow: left-center);
+		right: -165;
+		top: -5px;
+	}
+	.gb-site-tooltip-right-arrow-center-button {
+		&:hover {
+			.gb-site-tooltip-right-arrow-center {
+				@include opacity(1);
+				visibility: visible;
+				right: -190px;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+/////////////////////////////////
+///////////// POPUP /////////////
+/////////////////////////////////
+.gb-site-popup {
+	margin: 50px 0;
+}
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////
+///////////// BREAKPOINTS /////////////
+///////////////////////////////////////
+.gb-site-breakpoints {
+	ul {
+		li {
+			margin-top: 35px;
+
+			> div {
+				font-size: 20px;
+				color: $blue;
+			}
+
+			> p {
+				font-size: 14px;
+				margin-top: 10px;
+
+				em {
+					font-size: 20px;
+					position: relative;
+					top: 3px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+//////////////////////////////////////////
+///////////// GENERAL MIXINS /////////////
+//////////////////////////////////////////
+.gb-site-general-mixins {
+	ul {
+		li {
+			margin-top: 35px;
+
+			> div {
+				font-size: 20px;
+				color: $blue;
+			}
+
+			> p {
+				font-size: 14px;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

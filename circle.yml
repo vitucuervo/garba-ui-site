@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 4.2.2
+
+dependencies:
+  pre:
+    - pip install awscli
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - npm install
+      - aws s3 sync . s3://ui-doc.garba.ninja

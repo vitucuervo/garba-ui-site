@@ -1,0 +1,1743 @@
+<html>
+<head>
+	<title>Garba UI</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="dist/stylesheets/styles.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+	
+	<div id="gb-site-header" class="gb-site-header">
+		<canvas id="demo-canvas"></canvas>
+		<div class="gb-site-header-title">
+			<div class="gb-site-header-title-inner">
+				<em>Garba UI</em>
+				<span>The Garbarino UI Library</span>
+			</div>
+			<div class="gb-site-header-menu-icon"><span></span></div>
+			<div class="gb-site-header-menu">
+				<ul>
+					<li><a href="#box-usage">Usage</a></li>
+					<li><a href="#box-color">Colors</a></li>
+					<li><a href="#box-icons">Icons</a></li>
+					<li><a href="#box-grids">Grids</a></li>
+					<li><a href="#box-buttons">Buttons</a></li>
+					<li><a href="#box-forms">Forms</a></li>
+					<li><a href="#box-tabs">Tabs</a></li>
+					<li><a href="#box-popover">Popover</a></li>
+					<li><a href="#box-tooltip">Tooltip</a></li>
+					<li><a href="#box-popup">Popup</a></li>
+					<li><a href="#box-breakpoints">Breakpoints</a></li>
+					<li><a href="#box-general-mixins">General Mixins</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="gb-wrapper">
+
+		<div class="gb-site-box transparent" id="box-usage">
+			<div class="gb-site-usage">
+				<div class="gb-site-box-title">GIT</div>
+				<p><a href="https://github.com/garbarino-com/garba-ui" target="_blank">https://github.com/garbarino-com/garba-ui</a></p>
+				<div class="gb-site-box-title">Install</div>
+				<p>npm install git+https://github.com/garbarino-com/garba-ui.git --save</p>
+				<div class="gb-site-box-title">Update</div>
+				<p>npm update garba-ui --save</p>
+			</div>
+		</div>
+
+		<div class="gb-site-box" id="box-color">
+			<div class="gb-site-box-title">Colors</div>
+			<ul class="gb-site-colors">
+				<li class="green-darkest">
+					<div class="gb-site-colors-reference">
+						<p><em>$green-darkest</em></p>
+						<p>#117C00</p>
+					</div>
+				</li>
+				<li class="green-dark">
+					<div class="gb-site-colors-reference">
+						<p><em>$green-dark</em></p>
+						<p>#16A400</p>
+					</div>
+				</li>
+				<li class="green">
+					<div class="gb-site-colors-reference">
+						<p><em>$green</em></p>
+						<p>#49C237</p>
+					</div>
+				</li>
+				<li class="green-light">
+					<div class="gb-site-colors-reference">
+						<p><em>$green-light</em></p>
+						<p>#93DC87</p>
+					</div>
+				</li>
+				<li class="green-lighter">
+					<div class="gb-site-colors-reference">
+						<p><em>$green-lighter</em></p>
+						<p>#BAE9B2</p>
+					</div>
+				</li>
+				<li class="green-lightest">
+					<div class="gb-site-colors-reference">
+						<p><em>$green-lightest</em></p>
+						<p>#D2F6CC</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="gb-site-colors">
+				<li class="yellow-darkest">
+					<div class="gb-site-colors-reference">
+						<p><em>$yellow-darkest</em></p>
+						<p>#D79200</p>
+					</div>
+				</li>
+				<li class="yellow-dark">
+					<div class="gb-site-colors-reference">
+						<p><em>$yellow-dark</em></p>
+						<p>#FAAA00</p>
+					</div>
+				</li>
+				<li class="yellow">
+					<div class="gb-site-colors-reference">
+						<p><em>$yellow</em></p>
+						<p>#FEBA2B</p>
+					</div>
+				</li>
+				<li class="yellow-light">
+					<div class="gb-site-colors-reference">
+						<p><em>$yellow-light</em></p>
+						<p>#FFC751</p>
+					</div>
+				</li>
+				<li class="yellow-lighter">
+					<div class="gb-site-colors-reference">
+						<p><em>$yellow-lighter</em></p>
+						<p>#FCCF71</p>
+					</div>
+				</li>
+				<li class="yellow-lightest">
+					<div class="gb-site-colors-reference">
+						<p><em>$yellow-lightest</em></p>
+						<p>#FCE4B2</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="gb-site-colors">
+				<li class="blue-darkest">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue-darkest</em></p>
+						<p>#005998</p>
+					</div>
+				</li>
+				<li class="blue-dark">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue-dark</em></p>
+						<p>#016AB3</p>
+					</div>
+				</li>
+				<li class="blue">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue</em></p>
+						<p>#0084e0</p>
+					</div>
+				</li>
+				<li class="blue-2">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue-2</em></p>
+						<p>#3A9BDF</p>
+					</div>
+				</li>
+				<li class="blue-light">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue-light</em></p>
+						<p>#60B5F1</p>
+					</div>
+				</li>
+				<li class="blue-lighter">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue-lighter</em></p>
+						<p>#9ECFF1</p>
+					</div>
+				</li>
+				<li class="blue-lightest">
+					<div class="gb-site-colors-reference">
+						<p><em>$blue-lightest</em></p>
+						<p>#C3E7FF</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="gb-site-colors">
+				<li class="red-darkest">
+					<div class="gb-site-colors-reference">
+						<p><em>$red-darkest</em></p>
+						<p>#900000</p>
+					</div>
+				</li>
+				<li class="red-dark">
+					<div class="gb-site-colors-reference">
+						<p><em>$red-dark</em></p>
+						<p>#B1010B</p>
+					</div>
+				</li>
+				<li class="red">
+					<div class="gb-site-colors-reference">
+						<p><em>$red</em></p>
+						<p>#D1030F</p>
+					</div>
+				</li>
+				<li class="red-2">
+					<div class="gb-site-colors-reference">
+						<p><em>$red-2</em></p>
+						<p>#E42729</p>
+					</div>
+				</li>
+				<li class="red-light">
+					<div class="gb-site-colors-reference">
+						<p><em>$red-light</em></p>
+						<p>#E3564C</p>
+					</div>
+				</li>
+				<li class="red-lighter">
+					<div class="gb-site-colors-reference">
+						<p><em>$red-lighter</em></p>
+						<p>#FFA9A8</p>
+					</div>
+				</li>
+				<li class="red-lightest">
+					<div class="gb-site-colors-reference">
+						<p><em>$red-lightest</em></p>
+						<p>#FDD7D5</p>
+					</div>
+				</li>
+			</ul>
+			<ul class="gb-site-colors">
+				<li class="black">
+					<div class="gb-site-colors-reference">
+						<p><em>$black</em></p>
+						<p>#000000</p>
+					</div>
+				</li>
+				<li class="gray-darkest">
+					<div class="gb-site-colors-reference">
+						<p><em>$gray-darkest</em></p>
+						<p>#333333</p>
+					</div>
+				</li>
+				<li class="gray-dark">
+					<div class="gb-site-colors-reference">
+						<p><em>$gray-dark</em></p>
+						<p>#666666</p>
+					</div>
+				</li>
+				<li class="silver-chalice black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$silver-chalice</em></p>
+						<p>#9E9E9E</p>
+					</div>
+				</li>
+				<li class="silver black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$silver</em></p>
+						<p>#C4C4C4</p>
+					</div>
+				</li>
+				<li class="silver-light black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$silver-light</em></p>
+						<p>#D6D6D6</p>
+					</div>
+				</li>
+				<li class="silver-lightest black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$silver-lightest</em></p>
+						<p>#DFDFDF</p>
+					</div>
+				</li>
+				<li class="gray-light black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$gray-light</em></p>
+						<p>#E2E2E2</p>
+					</div>
+				</li>
+				<li class="gray-lightest black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$gray-lightest</em></p>
+						<p>#F6F6F6</p>
+					</div>
+				</li>
+				<li class="white black-text">
+					<div class="gb-site-colors-reference">
+						<p><em>$white</em></p>
+						<p>#FFFFFF</p>
+					</div>
+				</li>
+			</ul>
+			<div class="gb-site-box-title-secondary margin-top">Compumundo</div>
+			<ul class="gb-site-colors">
+				<li class="teal">
+					<div class="gb-site-colors-reference">
+						<p><em>$teal</em></p>
+						<p>#009A9F</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="gb-site-box transparent" id="box-icons">
+			<div class="gb-site-box-title">Icons</div>
+			<ul class="gb-site-icons">
+				<li>
+					<span class="gb-icon-bag"></span>
+					<p>gb-icon-bag</p>
+				</li>
+				<li>
+					<span class="gb-icon-bank"></span>
+					<p>gb-icon-bank</p>
+				</li>
+				<li>
+					<span class="gb-icon-calendar"></span>
+					<p>gb-icon-calendar</p>
+				</li>
+				<li>
+					<span class="gb-icon-card"></span>
+					<p>gb-icon-card</p>
+				</li>
+				<li>
+					<span class="gb-icon-cart"></span>
+					<p>gb-icon-cart</p>
+				</li>
+				<li>
+					<span class="gb-icon-checkmark"></span>
+					<p>gb-icon-checkmark</p>
+				</li>
+				<li>
+					<span class="gb-icon-checkmark-filled-circle"></span>
+					<p>gb-icon-checkmark-filled-circle</p>
+				</li>
+				<li>
+					<span class="gb-icon-clock"></span>
+					<p>gb-icon-clock</p>
+				</li>
+				<li>
+					<span class="gb-icon-cross"></span>
+					<p>gb-icon-cross</p>
+				</li>
+				<li>
+					<span class="gb-icon-cross-circle"></span>
+					<p>gb-icon-cross-circle</p>
+				</li>
+				<li>
+					<span class="gb-icon-dashboard"></span>
+					<p>gb-icon-dashboard</p>
+				</li>
+				<li>
+					<span class="gb-icon-dialog"></span>
+					<p>gb-icon-dialog</p>
+				</li>
+				<li>
+					<span class="gb-icon-double-thin-arrow-botom"></span>
+					<p>gb-icon-double-thin-arrow-botom</p>
+				</li>
+				<li>
+					<span class="gb-icon-double-thin-arrow-left"></span>
+					<p>gb-icon-double-thin-arrow-left</p>
+				</li>
+				<li>
+					<span class="gb-icon-double-thin-arrow-right"></span>
+					<p>gb-icon-double-thin-arrow-right</p>
+				</li>
+				<li>
+					<span class="gb-icon-double-thin-arrow-top"></span>
+					<p>gb-icon-double-thin-arrow-top</p>
+				</li>
+				<li>
+					<span class="gb-icon-download"></span>
+					<p>gb-icon-download</p>
+				</li>
+				<li>
+					<span class="gb-icon-email"></span>
+					<p>gb-icon-email</p>
+				</li>
+				<li>
+					<span class="gb-icon-exclamation-mark-circle"></span>
+					<p>gb-icon-exclamation-mark-circle</p>
+				</li>
+				<li>
+					<span class="gb-icon-exclamation-mark-triangle"></span>
+					<p>gb-icon-exclamation-mark-triangle</p>
+				</li>
+				<li>
+					<span class="gb-icon-facebook"></span>
+					<p>gb-icon-facebook</p>
+				</li>
+				<li>
+					<span class="gb-icon-filled-arrow-bottom"></span>
+					<p>gb-icon-filled-arrow-bottom</p>
+				</li>
+				<li>
+					<span class="gb-icon-filled-arrow-left"></span>
+					<p>gb-icon-filled-arrow-left</p>
+				</li>
+				<li>
+					<span class="gb-icon-filled-arrow-right"></span>
+					<p>gb-icon-filled-arrow-right</p>
+				</li>
+				<li>
+					<span class="gb-icon-filled-arrow-top"></span>
+					<p>gb-icon-filled-arrow-top</p>
+				</li>
+				<li>
+					<span class="gb-icon-filter"></span>
+					<p>gb-icon-filter</p>
+				</li>
+				<li>
+					<span class="gb-icon-fire"></span>
+					<p>gb-icon-fire</p>
+				</li>
+				<li>
+					<span class="gb-icon-gallery-view"></span>
+					<p>gb-icon-gallery-view</p>
+				</li>
+				<li>
+					<span class="gb-icon-games"></span>
+					<p>gb-icon-games</p>
+				</li>
+				<li>
+					<span class="gb-icon-garbarino-viajes"></span>
+					<p>gb-icon-garbarino-viajes</p>
+				</li>
+				<li>
+					<span class="gb-icon-gift"></span>
+					<p>gb-icon-gift</p>
+				</li>
+				<li>
+					<span class="gb-icon-gplus"></span>
+					<p>gb-icon-gplus</p>
+				</li>
+				<li>
+					<span class="gb-icon-heart"></span>
+					<p>gb-icon-heart</p>
+				</li>
+				<li>
+					<span class="gb-icon-home"></span>
+					<p>gb-icon-home</p>
+				</li>
+				<li>
+					<span class="gb-icon-info"></span>
+					<p>gb-icon-info</p>
+				</li>
+				<li>
+					<span class="gb-icon-instagram"></span>
+					<p>gb-icon-instagram</p>
+				</li>
+				<li>
+					<span class="gb-icon-key"></span>
+					<p>gb-icon-key</p>
+				</li>
+				<li>
+					<span class="gb-icon-list-view"></span>
+					<p>gb-icon-list-view</p>
+				</li>
+				<li>
+					<span class="gb-icon-marker"></span>
+					<p>gb-icon-marker</p>
+				</li>
+				<li>
+					<span class="gb-icon-menu-hamburguer"></span>
+					<p>gb-icon-menu-hamburguer</p>
+				</li>
+				<li>
+					<span class="gb-icon-music"></span>
+					<p>gb-icon-music</p>
+				</li>
+				<li>
+					<span class="gb-icon-notifications"></span>
+					<p>gb-icon-notifications</p>
+				</li>
+				<li>
+					<span class="gb-icon-pencil"></span>
+					<p>gb-icon-pencil</p>
+				</li>
+				<li>
+					<span class="gb-icon-percent-star"></span>
+					<p>gb-icon-percent-star</p>
+				</li>
+				<li>
+					<span class="gb-icon-phone"></span>
+					<p>gb-icon-phone</p>
+				</li>
+				<li>
+					<span class="gb-icon-photos"></span>
+					<p>gb-icon-photos</p>
+				</li>
+				<li>
+					<span class="gb-icon-plane"></span>
+					<p>gb-icon-plane</p>
+				</li>
+				<li>
+					<span class="gb-icon-play"></span>
+					<p>gb-icon-play</p>
+				</li>
+				<li>
+					<span class="gb-icon-preferences"></span>
+					<p>gb-icon-preferences</p>
+				</li>
+				<li>
+					<span class="gb-icon-question-mark-circle"></span>
+					<p>gb-icon-question-mark-circle</p>
+				</li>
+				<li>
+					<span class="gb-icon-search"></span>
+					<p>gb-icon-search</p>
+				</li>
+				<li>
+					<span class="gb-icon-shipping"></span>
+					<p>gb-icon-shipping</p>
+				</li>
+				<li>
+					<span class="gb-icon-shop"></span>
+					<p>gb-icon-shop</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-bold-arrow-bottom"></span>
+					<p>gb-icon-simple-bold-arrow-bottom</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-bold-arrow-left"></span>
+					<p>gb-icon-simple-bold-arrow-left</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-bold-arrow-right"></span>
+					<p>gb-icon-simple-bold-arrow-right</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-bold-arrow-top"></span>
+					<p>gb-icon-simple-bold-arrow-top</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-thin-arrow-bottom"></span>
+					<p>gb-icon-simple-thin-arrow-bottom</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-thin-arrow-left"></span>
+					<p>gb-icon-simple-thin-arrow-left</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-thin-arrow-right"></span>
+					<p>gb-icon-simple-thin-arrow-right</p>
+				</li>
+				<li>
+					<span class="gb-icon-simple-thin-arrow-top"></span>
+					<p>gb-icon-simple-thin-arrow-top</p>
+				</li>
+				<li>
+					<span class="gb-icon-sort"></span>
+					<p>gb-icon-sort</p>
+				</li>
+				<li>
+					<span class="gb-icon-star"></span>
+					<p>gb-icon-star</p>
+				</li>
+				<li>
+					<span class="gb-icon-star-half-left"></span>
+					<p>gb-icon-star-half-left</p>
+				</li>
+				<li>
+					<span class="gb-icon-star-half-right"></span>
+					<p>gb-icon-star-half-right</p>
+				</li>
+				<li>
+					<span class="gb-icon-tag"></span>
+					<p>gb-icon-tag</p>
+				</li>
+				<li>
+					<span class="gb-icon-trash"></span>
+					<p>gb-icon-trash</p>
+				</li>
+				<li>
+					<span class="gb-icon-twitter"></span>
+					<p>gb-icon-twitter</p>
+				</li>
+				<li>
+					<span class="gb-icon-user"></span>
+					<p>gb-icon-user</p>
+				</li>
+				<li>
+					<span class="gb-icon-users"></span>
+					<p>gb-icon-users</p>
+				</li>
+				<li>
+					<span class="gb-icon-video"></span>
+					<p>gb-icon-video</p>
+				</li>
+				<li>
+					<span class="gb-icon-whatsapp"></span>
+					<p>gb-icon-whatsapp</p>
+				</li>
+				<li>
+					<span class="gb-icon-youtube"></span>
+					<p>gb-icon-youtube</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="gb-site-box" id="box-grids">
+			<div class="gb-site-box-title">Grids (<a href="https://getbootstrap.com/examples/grid/">Bootstrap</a>)</div>
+			<div class="gb-site-grids">
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Three equal columns</p>
+					<div class="row">
+						<div class="col-md-4">.col-md-4</div>
+						<div class="col-md-4">.col-md-4</div>
+						<div class="col-md-4">.col-md-4</div>
+					</div>
+				</div>
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Three unequal columns</p>
+					<div class="row">
+						<div class="col-md-3">.col-md-3</div>
+						<div class="col-md-6">.col-md-6</div>
+						<div class="col-md-3">.col-md-3</div>
+					</div>
+				</div>
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Two columns</p>
+					<div class="row">
+						<div class="col-md-8">.col-md-8</div>
+						<div class="col-md-4">.col-md-4</div>
+					</div>
+				</div>
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Full width, single column</p>
+					<span>No grid classes are necessary for full-width elements.</span>
+				</div>
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Two columns with two nested columns</p>
+					<div class="row">
+						<div class="col-md-8">
+							.col-md-8
+							<div class="row">
+								<div class="col-md-6">.col-md-6</div>
+								<div class="col-md-6">.col-md-6</div>
+							</div>
+						</div>
+						<div class="col-md-4">.col-md-4</div>
+					</div>
+				</div>
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Mixed: mobile, tablet and desktop</p>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+						<div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+						<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+						<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+					</div>
+				</div>
+				<div class="gb-site-grids-example">
+					<p class="gb-site-box-title-secondary">Offset, push, and pull resets</p>
+					<div class="row">
+						<div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+						<div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+						<div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="gb-site-box" id="box-buttons">
+			<div class="gb-site-box-title">Buttons</div>
+			
+			<div class="gb-site-buttons">
+				<p class="gb-site-box-title-secondary">Button revenue</p>	
+				<div class="gb-site-buttons-content">
+					<p>
+						<button class="gb-button revenue large">large</button>
+						<button class="gb-button revenue">default</button>
+						<button class="gb-button revenue small">small</button>
+						<button class="gb-button revenue xsmall">xsmall</button>
+					</p>
+					<p><button class="gb-button revenue block">block</button></p>
+					<p><button class="gb-button revenue ghost">ghost</button></p>
+					<p><button class="gb-button revenue disabled">disabled</button></p>
+					<p>
+						<button class="gb-button large loading">
+							<span class="gb-spinner"></span>
+							loading
+						</button>
+					</p>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/a0f2caefc3a2a5530bd4d474625b3ea2.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-buttons">
+				<p class="gb-site-box-title-secondary">Button primary</p>	
+				<div class="gb-site-buttons-content">
+					<p>
+						<button class="gb-button primary large">large</button>
+						<button class="gb-button primary">default</button>
+						<button class="gb-button primary small">small</button>
+						<button class="gb-button primary xsmall">xsmall</button>
+					</p>
+					<p><button class="gb-button primary block">block</button></p>
+					<p><button class="gb-button primary ghost">ghost</button></p>
+					<p><button class="gb-button primary disabled">disabled</button></p>
+					<p>
+						<button class="gb-button large loading">
+							<span class="gb-spinner"></span>
+							loading
+						</button>
+					</p>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/a59a7d90e47e70d01472bf355e3898fa.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-buttons">
+				<p class="gb-site-box-title-secondary">Button secondary</p>
+				<div class="gb-site-buttons-content">
+					<p>
+						<button class="gb-button secondary large">large</button>
+						<button class="gb-button secondary">default</button>
+						<button class="gb-button secondary small">small</button>
+						<button class="gb-button secondary xsmall">xsmall</button>
+					</p>
+					<p><button class="gb-button secondary block">block</button></p>
+					<p><button class="gb-button secondary ghost">ghost</button></p>
+					<p><button class="gb-button secondary disabled">disabled</button></p>
+					<p>
+						<button class="gb-button large loading">
+							<span class="gb-spinner"></span>
+							loading
+						</button>
+					</p>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/c2fc5b85a5ec51324c304bd24a320c70.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-buttons">
+				<p class="gb-site-box-title-secondary">Button removal</p>	
+				<div class="gb-site-buttons-content">
+					<p>
+						<button class="gb-button removal large">large</button>
+						<button class="gb-button removal">default</button>
+						<button class="gb-button removal small">small</button>
+						<button class="gb-button removal xsmall">xsmall</button>
+					</p>
+					<p><button class="gb-button removal block">block</button></p>
+					<p><button class="gb-button removal ghost">ghost</button></p>
+					<p><button class="gb-button removal disabled">disabled</button></p>
+					<p>
+						<button class="gb-button large loading">
+							<span class="gb-spinner"></span>
+							loading
+						</button>
+					</p>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/75e7a896ff8a48a7387ec426ce8129f9.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="gb-site-box" id="box-forms">
+			<div class="gb-site-box-title">Forms</div>
+
+			<div class="gb-site-forms">
+				<p class="gb-site-box-title-secondary">Input &amp; label</p>
+				<div class="gb-site-forms-content">
+					<div>
+						<label class="gb-label">Default input</label>
+						<input class="gb-input"></input>
+					</div>
+					<div>
+						<label class="gb-label">Error input</label>
+						<input class="gb-input error-box"></input>
+						<p class="gb-error-msg" style="display: block;">Mensaje de error</p>
+					</div>
+					<div>
+						<label class="gb-label">Disabled input</label>
+						<input class="gb-input disabled" disabled="disabled"></input>
+					</div>
+					<div>
+						<label class="gb-label">Large</label>
+						<input class="gb-input large"></input>
+					</div>
+					<div>
+						<label class="gb-label">Default</label>
+						<input class="gb-input"></input>
+					</div>
+					<div>
+						<label class="gb-label">Small</label>
+						<input class="gb-input small"></input>
+					</div>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/907723d40a5bd2d1a4f90906d43ff358.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-forms">
+				<p class="gb-site-box-title-secondary">Checkbox</p>
+				<div class="gb-site-forms-content">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="gb-check">
+								<div class="gb-check-icon">
+									<span class="gb-icon-checkmark"></span>
+								</div>
+								<a>Opcion 1</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="gb-check gb--checked">
+								<div class="gb-check-icon">
+									<span class="gb-icon-checkmark"></span>
+								</div>
+								<a>Opcion 2</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="gb-check gb--disabled">
+								<div class="gb-check-icon">
+									<span class="gb-icon-checkmark"></span>
+								</div>
+								<a>Opcion 3</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="gb-check gb--square">
+								<div class="gb-check-icon">
+									<span class="gb-icon-checkmark"></span>
+								</div>
+								<img src="http://placehold.it/90x90">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="gb-check gb--square gb--checked">
+								<div class="gb-check-icon">
+									<span class="gb-icon-checkmark"></span>
+								</div>
+								<img src="http://placehold.it/90x90">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="gb-check gb--square gb--disabled">
+								<div class="gb-check-icon">
+									<span class="gb-icon-checkmark"></span>
+								</div>
+								<img src="http://placehold.it/90x90">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/b0612e6884c9767a1de2834752e00755.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-forms">
+				<p class="gb-site-box-title-secondary">Select</p>
+				<div class="gb-site-forms-content">
+					<div>
+						<label class="gb-label">Default select</label>
+						<div class="gb-select">
+							<select>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+							</select>
+						</div>
+					</div>
+					<div>
+						<label class="gb-label">Error select</label>
+						<div class="gb-select error-box">
+							<select>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+							</select>
+						</div>
+						<p class="gb-error-msg" style="display: block;">Mensaje de error</p>
+					</div>
+					<div>
+						<label class="gb-label">Disabled select</label>
+						<div class="gb-select disabled">
+							<select>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+							</select>
+						</div>
+					</div>
+					<div>
+						<label class="gb-label">Large</label>
+						<div class="gb-select large">
+							<select>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+							</select>
+						</div>
+					</div>
+					<div>
+						<label class="gb-label">Default</label>
+						<div class="gb-select">
+							<select>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+							</select>
+						</div>
+					</div>
+					<div>
+						<label class="gb-label">Small</label>
+						<div class="gb-select small">
+							<select>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+								<option>Lorem ipsum</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/d215be8b55c947df3830c418741994fe.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="gb-site-box" id="box-tabs">
+			<div class="gb-site-box-title">Tabs</div>
+
+			<div class="gb-site-tabs">
+				<div class="gb-site-box-title-secondary">Tabs default</div>
+				<div class="gb-tabs">
+					<ul class="gb-tabs-nav">
+						<li class="gb--active tab-1-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 1
+								</div>
+							</a>
+						</li>
+						<li class="tab-2-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 2
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="gb-tabs-container">
+						<div class="gb-tab-content tab-1-content gb--active">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 1</p>
+						</div>
+						<div class="gb-tab-content tab-2-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/89242aa7b53e21dbd26ff48332661dd1.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-tabs">
+				<div class="gb-site-box-title-secondary">Tabs 3</div>
+				<div class="gb-tabs">
+					<ul class="gb-tabs-nav gb--tabs-3">
+						<li class="gb--active tab-1-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 1
+								</div>
+							</a>
+						</li>
+						<li class="tab-2-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 2
+								</div>
+							</a>
+						</li>
+						<li class="tab-3-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 3
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="gb-tabs-container">
+						<div class="gb-tab-content gb--active tab-1-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 1</p>
+						</div>
+						<div class="gb-tab-content tab-2-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 2</p>
+						</div>
+						<div class="gb-tab-content tab-3-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 3</p>
+						</div>
+					</div>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/6df32e3fb69ca66802c3f0c728215b61.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-tabs">
+				<div class="gb-site-box-title-secondary">Tabs 4</div>
+				<div class="gb-tabs">
+					<ul class="gb-tabs-nav gb--tabs-4">
+						<li class="gb--active tab-1-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 1
+								</div>
+							</a>
+						</li>
+						<li class="tab-2-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 2
+								</div>
+							</a>
+						</li>
+						<li class="tab-3-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 3
+								</div>
+							</a>
+						</li>
+						<li class="tab-4-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 4
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="gb-tabs-container">
+						<div class="gb-tab-content gb--active tab-1-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 1</p>
+						</div>
+						<div class="gb-tab-content tab-2-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 2</p>
+						</div>
+						<div class="gb-tab-content tab-3-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 3</p>
+						</div>
+						<div class="gb-tab-content tab-4-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 4</p>
+						</div>
+					</div>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/bf0dc276e3a65fcc6ad6a5a085e9497a.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="gb-site-tabs">
+				<div class="gb-site-box-title-secondary">Tabs 5</div>
+				<div class="gb-tabs">
+					<ul class="gb-tabs-nav gb--tabs-5">
+						<li class="gb--active tab-1-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 1
+								</div>
+							</a>
+						</li>
+						<li class="tab-2-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 2
+								</div>
+							</a>
+						</li>
+						<li class="tab-3-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 3
+								</div>
+							</a>
+						</li>
+						<li class="tab-4-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 4
+								</div>
+							</a>
+						</li>
+						<li class="tab-5-button">
+							<a>
+								<div class="gb-tabs-nav-img">
+									<img src="http://placehold.it/75x75">
+								</div>
+								<div class="gb-tabs-nav-text">
+									Tab 5
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="gb-tabs-container">
+						<div class="gb-tab-content gb--active tab-1-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 1</p>
+						</div>
+						<div class="gb-tab-content tab-2-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 2</p>
+						</div>
+						<div class="gb-tab-content tab-3-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 3</p>
+						</div>
+						<div class="gb-tab-content tab-4-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 4</p>
+						</div>
+						<div class="gb-tab-content tab-5-content">
+							<div class="gb-tab-content-title">Title</div>
+							<p>Content 5</p>
+						</div>
+					</div>
+				</div>
+				<div class="gb-site-code-box">
+					<div class="gb-site-code-box-header">
+						<ul>
+							<li class="tab-html active">html</li>
+						</ul>
+					</div>
+					<div class="gb-site-code-box-content active content-html">
+						<div class="gb-site-code-box-content-inner">
+							<script src="https://gist.github.com/vitucuervo/f84aaff7c9b55c3febab8578c67ea402.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+		<div class="gb-site-box" id="box-popover">
+			<div class="gb-site-box-title">Mixin Popover</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+
+					<div class="gb-site-popover">
+						<div class="gb-site-box-title-secondary">Popover down</div>
+						<ul>
+							<li>
+								<a id="popover-top-arrow-left-button">Arrow left</a>
+								<div class="gb-site-popover-top-arrow-left">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-top-arrow-center-button">Arrow center</a>
+								<div class="gb-site-popover-top-arrow-center">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-top-arrow-right-button">Arrow right</a>
+								<div class="gb-site-popover-top-arrow-right">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="gb-site-popover">
+						<div class="gb-site-box-title-secondary">Popover top</div>
+						<ul>
+							<li>
+								<a id="popover-bottom-arrow-left-button">Arrow left</a>
+								<div class="gb-site-popover-bottom-arrow-left">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-bottom-arrow-center-button">Arrow center</a>
+								<div class="gb-site-popover-bottom-arrow-center">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-bottom-arrow-right-button">Arrow right</a>
+								<div class="gb-site-popover-bottom-arrow-right">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-sm-6">
+
+					<div class="gb-site-popover">
+						<div class="gb-site-box-title-secondary">Popover left</div>
+						<ul>
+							<li>
+								<a id="popover-left-arrow-top-button">Arrow top</a>
+								<div class="gb-site-popover-left-arrow-top">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-left-arrow-center-button">Arrow center</a>
+								<div class="gb-site-popover-left-arrow-center">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-left-arrow-bottom-button">Arrow bottom</a>
+								<div class="gb-site-popover-left-arrow-bottom">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="gb-site-popover">
+						<div class="gb-site-box-title-secondary">Popover right</div>
+						<ul>
+							<li>
+								<a id="popover-right-arrow-top-button">Arrow top</a>
+								<div class="gb-site-popover-right-arrow-top">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-right-arrow-center-button">Arrow center</a>
+								<div class="gb-site-popover-right-arrow-center">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+							<li>
+								<a id="popover-right-arrow-bottom-button">Arrow bottom</a>
+								<div class="gb-site-popover-right-arrow-bottom">
+									<span class="gb-popover-close">
+										<span class="gb-icon-cross"></span>
+									</span>
+									<div class="gb-popover-title">Titulo</div>
+									<div class="gb-popover-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="gb-site-code-box">
+				<div class="gb-site-code-box-header">
+					<ul>
+						<li class="tab-html active">html</li>
+						<li class="tab-scss">scss</li>
+						<li class="tab-mixin">mixin</li>
+					</ul>
+				</div>
+				<div class="gb-site-code-box-content active content-html">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/af9904ebb67019cd9d61e735d495155f.js"></script>
+					</div>
+				</div>
+				<div class="gb-site-code-box-content content-scss">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/9a20a6820c26b70f770f2ec9017e1b78.js"></script>
+					</div>
+				</div>
+				<div class="gb-site-code-box-content content-mixin">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/39d918a5819df7cf5c36b54e07e1c7c1.js"></script>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="gb-site-box" id="box-tooltip">
+			<div class="gb-site-box-title">Mixin Tooltip</div>
+			<div class="row">
+				<div class="col-sm-6">
+
+					<div class="gb-site-tooltip">
+						<div class="gb-site-box-title-secondary">Tooltip down</div>
+						<ul>
+							<li>
+								<a class="gb-site-tooltip-top-arrow-left-button">
+									Arrow left
+									<div class="gb-site-tooltip-top-arrow-left">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="gb-site-tooltip-top-arrow-center-button">
+									Arrow center
+									<div class="gb-site-tooltip-top-arrow-center">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="gb-site-tooltip-top-arrow-right-button">
+									Arrow right
+									<div class="gb-site-tooltip-top-arrow-right">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="gb-site-tooltip">
+						<div class="gb-site-box-title-secondary">Tooltip top</div>
+						<ul>
+							<li>
+								<a class="gb-site-tooltip-bottom-arrow-left-button">
+									Arrow left
+									<div class="gb-site-tooltip-bottom-arrow-left">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="gb-site-tooltip-bottom-arrow-center-button">
+									Arrow center
+									<div class="gb-site-tooltip-bottom-arrow-center">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="gb-site-tooltip-bottom-arrow-right-button">
+									Arrow right
+									<div class="gb-site-tooltip-bottom-arrow-right">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>					
+
+				</div>
+				<div class="col-sm-6">
+
+					<div class="gb-site-tooltip">
+						<div class="gb-site-box-title-secondary">Tooltip left</div>
+						<ul>
+							<li>
+								<a class="gb-site-tooltip-left-arrow-center-button">
+									Arrow center
+									<div class="gb-site-tooltip-left-arrow-center">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="gb-site-tooltip">
+						<div class="gb-site-box-title-secondary">Tooltip right</div>
+						<ul>
+							<li>
+								<a class="gb-site-tooltip-right-arrow-center-button">
+									Arrow center
+									<div class="gb-site-tooltip-right-arrow-center">
+										Lorem ipsum dolor sit
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>					
+
+				</div>
+			</div>
+			<div class="gb-site-code-box">
+				<div class="gb-site-code-box-header">
+					<ul>
+						<li class="tab-html active">html</li>
+						<li class="tab-scss">scss</li>
+						<li class="tab-mixin">mixin</li>
+					</ul>
+				</div>
+				<div class="gb-site-code-box-content active content-html">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/d368f4080a1d5f15abdf001cf820c2ad.js"></script>
+					</div>
+				</div>
+				<div class="gb-site-code-box-content content-scss">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/e245a5bd4afdb84be9be996895bd75a7.js"></script>
+					</div>
+				</div>
+				<div class="gb-site-code-box-content content-mixin">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/55b304f1f58796dda5a7c8d3f43b041b.js"></script>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="gb-site-box" id="box-popup">
+			<div class="gb-site-box-title">Popup (<a href="http://getbootstrap.com/javascript/#modals" target="_blank">Bootstrap</a>)</div>
+
+			<div class="gb-site-popup">
+				<a data-toggle="modal" data-target="#modal-example">Ver popup</a>
+				<div id="modal-example" class="modal fade gb-popup">
+				    <div class="modal-dialog modal-lg">
+				        <!-- Modal content-->
+				        <div class="modal-content">
+				            <div class="modal-header">
+				                <button class="close" type="button" data-dismiss="modal"><span class="gb-icon-cross"></span></button>
+				                <h4 class="modal-title">Popup example</h4>
+				            </div>
+				            <div class="modal-body">
+				            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gb-site-code-box">
+				<div class="gb-site-code-box-header">
+					<ul>
+						<li class="tab-html active">html</li>
+					</ul>
+				</div>
+				<div class="gb-site-code-box-content active content-html">
+					<div class="gb-site-code-box-content-inner">
+						<script src="https://gist.github.com/vitucuervo/4d1c56f1a12c70a22854371dafd43989.js"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		 <div class="gb-site-box" id="box-breakpoints">
+			<div class="gb-site-box-title">Mixin responsive breakpoints</div>
+			<div class="gb-site-breakpoints">
+				<ul>
+					<li>
+						<div>@include breakpoint("small")</div>
+						<p>- From 0 to 767px</p>
+					</li>
+					<li>
+						<div>@include breakpoint("medium")</div>
+						<p>- From 768px to 1024px</p>
+					</li>
+					<li>
+						<div>@include breakpoint("large")</div>
+						<p>- From 1025px to 1365px</p>
+					</li>
+					<li>
+						<div>@include breakpoint("huge")</div>
+						<p>- From 1366px to <em>&infin;</em></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="gb-site-box" id="box-general-mixins">
+			<div class="gb-site-box-title">General Mixins</div>
+			<div class="gb-site-general-mixins">
+				<ul>
+					<li>
+						<div>@mixin clearfix</div>
+						<p>- Clear floated elements (should be applied in the container of the floated elements)</p>
+					</li>
+					<li>
+						<div>@mixin css3</div>
+						<p>- Crossbrowser css3 properties (Ex: opacity, transform, rotate)</p>
+					</li>
+					<li>
+						<div>@mixin ellipsis-block</div>
+						<p>- Ellipsis for block text (only works in chrome)</p>
+					</li>
+					<li>
+						<div>@mixin vertical-scrollbar</div>
+						<p>- Styles for vertical scrollbar (only works in chrome)</p>
+					</li>
+					<li>
+						<div>Transitions</div>
+						<p>- Mixins for show/hide transitions</p>
+					</li>
+					<li>
+						<div>@mixin fontStyle</div>
+						<p>- Set color, font-size and transform the font-size from px to em</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/header.js"></script>
+	<script src="js/popover-popup.js"></script>
+	<script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/rAF.js"></script>
+    <script src="js/demo-3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
